@@ -141,6 +141,14 @@ def gifs(ctx):
 
 @bot.command(pass_context=True)
 @asyncio.coroutine
+def feelbad(ctx):
+
+    path = "images/feelbad1.png"
+    yield from bot.send_file(ctx.message.channel, path)
+    yield from bot.delete_message(ctx.message)
+
+@bot.command(pass_context=True)
+@asyncio.coroutine
 def lenny(ctx):
     """
     Lenny face
